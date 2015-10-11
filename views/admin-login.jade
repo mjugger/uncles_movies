@@ -1,0 +1,18 @@
+extends layout
+
+block content
+	div(ng-controller="adminLogin" layout="row" layout-align="center center" layout-fill)
+		md-content(flex="50").md-whiteframe-1dp
+			md-toolbar.md-primary
+				h1.md-toolbar-tools Admin Login
+			form(layout-padding name="adminLoginForm")
+				md-input-container
+					label Username
+					input(ng-model="adminForm.username" required)
+					div(ng-messages="adminLoginForm.username.$error")
+						div(ng-message="required") username is required!
+				md-input-container
+					label Password
+					input(type="password" ng-model="adminForm.password" required)
+					div(ng-messages="adminLoginForm.password.$error")
+						div(ng-message="required") password is required!
