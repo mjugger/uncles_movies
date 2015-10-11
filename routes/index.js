@@ -3,11 +3,11 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('layout', { title: 'Express' });
 });
 
-router.get('/:route', function(req, res, next) {
-	res.render('../views/'+req.params.route);
+router.get('/partials/:ngRoute', function(req, res, next) {
+	res.render('partials/'+req.params.ngRoute);
 });
 
 

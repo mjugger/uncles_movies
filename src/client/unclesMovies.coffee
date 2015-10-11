@@ -1,10 +1,14 @@
-unclesMovies = angular.module 'unclesMovies', ['ngMaterial','ngRoute']
+unclesMovies = angular.module 'unclesMovies', ['ngMaterial','ngRoute','ngResource']
 
 unclesMovies.config ['$routeProvider','$locationProvider', ($routeProvider,$locationProvider) ->
 	$locationProvider.html5Mode true
+	console.log '$routeProvider',$routeProvider,'$locationProvider',$locationProvider
 	$routeProvider
+	.when '/',{
+		templateUrl:'partials/index'
+	}
 	.when '/admin-login',{
-		templateUrl:'views/admin-login.jade'
+		templateUrl:'partials/admin-login'
 	}
 ]
 

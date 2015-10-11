@@ -1,14 +1,17 @@
 doctype html
 html(ng-app="unclesMovies")
-  head
-    title= title
-    link(rel='stylesheet' href='/stylesheets/style.css')
-    link(rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css')
-    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js')
-    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js')
-    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.min.js')
-    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-aria.min.js')
-    script(src='https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.js')
-    script(src='/javascripts/unclesMovies.js')
-  body
-    block content 
+	head
+		base(href="/")
+		title= title
+		link(rel='stylesheet' href='/stylesheets/style.css')
+		link(rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css')
+		script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js')
+		script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js')
+		script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-resource.min.js')
+		script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.min.js')
+		script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-aria.min.js')
+		script(src='https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.js')
+		script(src='/javascripts/unclesMovies.js')
+	body
+		md-content(layout-fill)
+			ng-view

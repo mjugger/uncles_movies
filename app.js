@@ -24,6 +24,7 @@ app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+app.use('/partials/:ngRoute', routes);
 //angular routing
 app.use('*', routes);
 //app.use('/users', users);

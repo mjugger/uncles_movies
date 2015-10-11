@@ -4,6 +4,7 @@ coffee = require 'gulp-coffee'
 concat = require 'gulp-concat'
 
 gulp.task 'coffee', ->
+	util.beep()
 	gulp.src 'src/client/*.coffee'
 	.pipe coffee bare:true
 	.pipe concat 'unclesMovies.js'
